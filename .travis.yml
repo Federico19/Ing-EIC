@@ -1,0 +1,12 @@
+sudo: required
+
+language: node.js
+
+node.js: 
+  - 16
+
+script:
+  - npm test
+
+
+
