@@ -1,8 +1,6 @@
-import express from "express";
-import { v4 } from "uuid";
-import {sum} from "./operation.js";
-
+const express = require('express');
 const app = express();
+const sum = require('./operation.js');
 
 // Routes
 app.get("/", (req, res) => {
@@ -10,4 +8,4 @@ app.get("/", (req, res) => {
   res.send(`2 y 2 son ${result}`);
 });
 
-export default app;
+module.exports = app;

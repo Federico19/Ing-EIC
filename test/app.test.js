@@ -1,5 +1,7 @@
-import request from "supertest";
-import app from "../src/app";
+//import request from "supertest";
+const app = require('../src/app');
+const request = require('supertest')
+//import app from "../src/app";
 
 describe("GET /", () => {
   test("/", async () => {
