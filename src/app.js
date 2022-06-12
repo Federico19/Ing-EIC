@@ -7,7 +7,7 @@ const app = express();
 // Routes
 app.get("/", (req, res) => {
   const result = sum(2,2);
-  res.send(`2 y 2 son ${result}`);
+  res.send(`4 y 2 son ${result}`);
 });
 
 export default app;
