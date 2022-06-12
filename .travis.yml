@@ -1,9 +1,0 @@
-sudo: required
-
-language: node.js
-
-node.js: 
-  - 12.21.0
-
-script:
-  -npm test
