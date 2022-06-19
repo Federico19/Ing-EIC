@@ -1,6 +1,6 @@
- function sum(x,y){
-    const result = x+y;
-    return result
+function sum(x,y){
+	const result = x+y;
+	return result;
 }
 
 module.exports = sum;

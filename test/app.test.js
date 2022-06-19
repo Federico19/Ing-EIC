@@ -1,13 +1,13 @@
 //import request from "supertest";
 const app = require('../src/app');
-const request = require('supertest')
+const request = require('supertest');
 //import app from "../src/app";
 
-describe("GET /", () => {
-  test("/", async () => {
-    await request(app).get("/").send().
-    expect('2 y 2 son 4');
-  });
+describe('GET /', () => {
+	test('/', async () => {
+		await request(app).get('/').send().
+			expect('2 y 2 son 4');
+	});
 });
 
 
