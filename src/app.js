@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const sum = require('./operation.js');
+const sum = require('./operation');
 
 // Routes
 app.get("/", (req, res) => {
