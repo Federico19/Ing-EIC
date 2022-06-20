@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "node src/index.js",
+    "build": "node src/index.js",
     "lint": "eslint .",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },

@@ -1,17 +1,32 @@
+name: Entorno Integracion Continua
 on: push
-name: deploy
 jobs:
-  build-and-push:
-    name: build and push image
-    runs-on: ubuntu-latest
+  ci_to_master:
+    runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@master
-    - name: build and push to docker
-      uses: docker/build-push-action@v2
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
-        repository: ${{ github.repository }}
-        tag_with_ref: true
-        tag_with_sha: true
-        tags: ${{ github.sha }}
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+
+
+# name: deploy
+# on: push
+# jobs:
+#   build-and-push:
+#     name: build and push image
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@master
+#     - name: build and push to docker
+#       uses: docker/build-push-action@v2
+#       with:
+#         username: ${{ secrets.DOCKERHUB_USERNAME }}
+#         password: ${{ secrets.DOCKERHUB_TOKEN }}
+#         repository: ${{ github.repository }}
+#         tag_with_ref: true
+#         tag_with_sha: true
+#         tags: ${{ github.sha }}
