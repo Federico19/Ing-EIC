@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./dist/index.js",
     "build": "ncc build ./src/index.js -o dist",
     "lint": "eslint .",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
