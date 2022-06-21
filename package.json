@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node src/index.js",
+    "build": "ncc build ./src/index.js -o dist",
     "lint": "eslint .",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
@@ -16,6 +16,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@vercel/ncc": "^0.34.0",
     "eslint": "^8.18.0",
     "jest": "^27.5.1",
     "supertest": "^6.2.3",
